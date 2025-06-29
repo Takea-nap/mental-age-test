@@ -114,7 +114,7 @@ export default function TestPage() {
             </div>
             
             {/* 快速预览按钮 - 仅用于开发测试 */}
-            {!isCompleted && (
+            {/* {!isCompleted && (
               <div className="flex justify-center mb-4">
                 <Button
                   variant="outline"
@@ -122,10 +122,10 @@ export default function TestPage() {
                   onClick={handlePreviewResult}
                   className="text-xs text-gray-500"
                 >
-                  预览结果页面
+                  
                 </Button>
               </div>
-            )}
+            )} */}
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {texts[language].title}

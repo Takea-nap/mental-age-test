@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Download, Share2, RotateCcw } from "lucide-react";
 import { getMentalAgeDescription } from "@/lib/utils";
+import html2canvas from "html2canvas";
 
 interface TestResultProps {
   mentalAge: number;
@@ -24,7 +25,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
       emotionalMaturity: "情感成熟度",
       lifeExperience: "生活阅历",
       tryAgain: "再测一次",
-      export: "导出结果",
+      export: "导出图片",
       share: "分享结果"
     },
     en: {
@@ -35,7 +36,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
       emotionalMaturity: "Emotional Maturity",
       lifeExperience: "Life Experience",
       tryAgain: "Try Again",
-      export: "Export Result",
+      export: "Export Image",
       share: "Share Result"
     }
   };
@@ -65,17 +66,113 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
   const scores = getScores(mentalAge);
 
   const handleExport = () => {
-    const resultText = `${texts[language].yourAge}: ${mentalAge}\n\n${description}\n\n${texts[language].logicalThinking}: ${scores.logical}%\n${texts[language].emotionalMaturity}: ${scores.emotional}%\n${texts[language].lifeExperience}: ${scores.experience}%`;
+    // 创建一个用于导出的元素
+    const exportElement = document.createElement('div');
+    exportElement.style.cssText = `
+      width: 800px;
+      padding: 60px;
+      background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      position: fixed;
+      top: -9999px;
+      left: -9999px;
+    `;
     
-    const blob = new Blob([resultText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `mental-age-result-${mentalAge}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    exportElement.innerHTML = `
+      <div style="background: rgba(255, 255, 255, 0.9); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(16px); position: relative;">
+        <!-- 主要结果显示 -->
+        <div style="text-align: center; margin-bottom: 48px;">
+          <div style="font-size: 120px; font-weight: 900; color: #111827; margin-bottom: 16px; line-height: 1;">
+            ${mentalAge}
+          </div>
+          <h2 style="font-size: 32px; font-weight: 600; color: #374151; margin-bottom: 8px; margin-top: 0;">
+            ${texts[language].yourAge}
+          </h2>
+          <p style="color: #6b7280; font-size: 18px; margin: 0;">
+            ${texts[language].basedOn}
+          </p>
+        </div>
+
+        <!-- 维度分析 -->
+        <div style="margin-bottom: 48px;">
+          <!-- 逻辑思维 -->
+          <div style="margin-bottom: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+                ${texts[language].logicalThinking}
+              </span>
+              <span style="font-size: 16px; color: #6b7280;">${scores.logical}%</span>
+            </div>
+            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
+              <div style="height: 100%; width: ${scores.logical}%; background: linear-gradient(90deg, #a855f7, #d946ef); border-radius: 6px;"></div>
+            </div>
+          </div>
+
+          <!-- 情感成熟度 -->
+          <div style="margin-bottom: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+                ${texts[language].emotionalMaturity}
+              </span>
+              <span style="font-size: 16px; color: #6b7280;">${scores.emotional}%</span>
+            </div>
+            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
+              <div style="height: 100%; width: ${scores.emotional}%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 6px;"></div>
+            </div>
+          </div>
+
+          <!-- 生活阅历 -->
+          <div style="margin-bottom: 32px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+                ${texts[language].lifeExperience}
+              </span>
+              <span style="font-size: 16px; color: #6b7280;">${scores.experience}%</span>
+            </div>
+            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
+              <div style="height: 100%; width: ${scores.experience}%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 6px;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 描述文本 -->
+        <div style="text-align: center;">
+          <p style="color: #4b5563; font-size: 18px; line-height: 1.6; margin: 0; max-width: 600px; margin: 0 auto;">
+            ${description}
+          </p>
+        </div>
+
+        <!-- 水印 -->
+        <div style="position: absolute; bottom: 20px; right: 20px; color: #9ca3af; font-size: 12px; font-weight: 400;">
+          created by mental-age-test.app
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(exportElement);
+
+    // 使用html2canvas生成图片
+    html2canvas(exportElement, {
+      backgroundColor: null,
+      scale: 2, // 高分辨率
+      useCORS: true,
+      allowTaint: true,
+      width: 800,
+      height: exportElement.offsetHeight
+    }).then(canvas => {
+      // 创建下载链接
+      const link = document.createElement('a');
+      link.download = `mental-age-result-${mentalAge}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      
+      // 清理临时元素
+      document.body.removeChild(exportElement);
+    }).catch((err: Error) => {
+      console.error('导出图片失败:', err);
+      document.body.removeChild(exportElement);
+      alert(language === 'zh' ? '导出图片失败，请重试' : 'Failed to export image, please try again');
+    });
   };
 
   const handleShare = async () => {

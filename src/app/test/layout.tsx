@@ -88,7 +88,7 @@ export default function TestLayout({
             "@type": "WebApplication",
             "name": "Mental Age Test",
             "description": "A scientifically-designed mental age test to assess psychological maturity and cognitive development",
-            "url": "https://yourdomain.com/test",
+            "url": "https://mental-age-test.app/test",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web Browser",
             "offers": {
