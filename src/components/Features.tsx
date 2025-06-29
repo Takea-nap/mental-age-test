@@ -12,38 +12,38 @@ export default function Features() {
   const features = [
     {
       icon: Brain,
-      title: "Advanced Psychology",
-      description: "Our test is based on established psychological research and cognitive science principles to provide accurate mental age assessment.",
+      title: "Advanced Mental Age Psychology",
+      description: "Our mental age test provides an accurate intellectual age assessment and can serve as a preliminary character disorder test.",
       color: "purple"
     },
     {
       icon: Target,
-      title: "Personalized Insights",
-      description: "Receive detailed analysis of your cognitive patterns, emotional maturity, and mental development with actionable recommendations.",
+      title: "Personalized Mental Health Insights",
+      description: "Our mental age test can help you explore questions like 'what mental problem do I have quiz' and offers insights similar to a personality problems test.",
       color: "blue"
     },
     {
       icon: Users,
-      title: "Social Comparison",
-      description: "Compare your results with peers and understand where you stand in different age groups and demographics.",
+      title: "Social Mental Age Comparison",
+      description: "Compare your mental age test results with others and see how your mental maturity test scores stack up against different age groups.",
       color: "green"
     },
     {
       icon: Share2,
-      title: "Easy Sharing",
-      description: "Share your results on social media or with friends while maintaining complete control over your privacy settings.",
+      title: "Easy Mental Age Sharing",
+      description: "Share your mental age quiz results on social media to discuss 'what is my mental age' with friends and family.",
       color: "orange"
     },
     {
       icon: Globe,
-      title: "Multi-Language",
-      description: "Available in multiple languages to ensure accurate assessment regardless of your native language.",
+      title: "Multi-Language Mental Age Test",
+      description: "Our mental age test is available in multiple languages, making it the best personality test for a global audience.",
       color: "pink"
     },
     {
       icon: Smartphone,
-      title: "Mobile Optimized",
-      description: "Take the test seamlessly on any device - desktop, tablet, or smartphone with the same high-quality experience.",
+      title: "Mobile Mental Age Quiz",
+      description: "Take our mental age test on any device. We offer a high-quality experience for a mental age test free of charge.",
       color: "cyan"
     }
   ];
@@ -66,10 +66,10 @@ export default function Features() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Why Choose Our Mental Age Test?
+            Why Choose Our Free Mental Age Test?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our comprehensive assessment combines cutting-edge psychology with user-friendly design to deliver insights you can trust and understand.
+            Our mental age quiz is a leading mental health quiz that provides reliable insights. If you're wondering 'what mental disorder do I have quiz', our intellectual age test can be a valuable first step.
           </p>
         </div>
 
@@ -97,22 +97,18 @@ export default function Features() {
 
         {/* Stats Section */}
         <div className="mt-20 bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 text-white">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold mb-2">2M+</div>
-              <div className="text-gray-300">Tests Completed</div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold mb-2">98%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
+              <div className="text-gray-300">Mental Age Accuracy Rate</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">150+</div>
-              <div className="text-gray-300">Countries Served</div>
+              <div className="text-gray-300">Countries Taking Our Mental Age Quiz</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">4.9</div>
-              <div className="text-gray-300">User Rating</div>
+              <div className="text-gray-300">Mental Age Test User Rating</div>
             </div>
           </div>
         </div>

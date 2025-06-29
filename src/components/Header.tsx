@@ -12,7 +12,7 @@ export default function Header() {
     { name: "Home", href: "/#home" },
     { name: "Features", href: "/#features" },
     { name: "How It Works", href: "/#how-it-works" },
-    { name: "FAQ", href: "/#faq" },
+    { name: " FAQ", href: "/#faq" },
   ];
 
   return (
@@ -21,8 +21,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#home" className="text-2xl font-bold text-gray-900">
-              MentalAge
+            <a href="#home" className="text-2xl font-bold text-gray-900" title="Mental Age Test - Free Online Mental Age Quiz">
+              MentalAge Test
             </a>
           </div>
 
@@ -41,8 +41,8 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex">
-            <Button className="bg-black hover:bg-gray-800 text-white px-6">
-              Take Test Now
+            <Button className="bg-black hover:bg-gray-800 text-white px-6" title="Start Free Mental Age Test">
+              Start Test Now
             </Button>
           </div>
 
@@ -67,7 +67,7 @@ export default function Header() {
                 ))}
                 <div className="pt-4">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white">
-                    Take Test Now
+                    Start Test Now
                   </Button>
                 </div>
               </nav>

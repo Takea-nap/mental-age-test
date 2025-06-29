@@ -14,21 +14,21 @@ import {
 export default function Footer() {
   const footerLinks = {
     product: [
-      { name: "Take Test", href: "/#home" },
-      { name: "How It Works", href: "/#how-it-works" },
-      { name: "Features", href: "/#features" },
+      { name: "Take Mental Age Test", href: "/#home" },
+      { name: "How Mental Age Quiz Works", href: "/#how-it-works" },
+      { name: "Mental Age Test Features", href: "/#features" },
       { name: "Pricing", href: "/#pricing" },
-      { name: "FAQ", href: "#faq" }
+      { name: "Mental Age Test FAQ", href: "#faq" }
     ],
     company: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Research", href: "/research" },
+      { name: "About Our Mental Age Test", href: "/about" },
+      { name: "Mental Age Research", href: "/research" },
       { name: "Careers", href: "/careers" },
       { name: "Press Kit", href: "/press" },
       { name: "Contact", href: "/contact" }
     ],
     resources: [
-      { name: "Blog", href: "/blog" },
+      { name: "Mental Age Blog", href: "/blog" },
       { name: "Psychology Guide", href: "/guide" },
       { name: "Help Center", href: "/help" },
       { name: "API Documentation", href: "/api" },
@@ -61,11 +61,11 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
                 <Brain className="w-8 h-8 mr-3 text-purple-500" />
-                <span className="text-2xl font-bold">MentalAge</span>
+                <span className="text-2xl font-bold">MentalAge Test</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-                Discover your cognitive age through our scientifically-designed assessment.
-                Trusted by millions worldwide for accurate personality insights and mental age analysis.
+                Discover your intellectual age through our scientifically-designed mental age test and mental health quiz assessment.
+                Trusted by millions worldwide for accurate personality insights, mental age analysis, and cognitive maturity evaluation. Take our free mental age quiz to understand what is my mental age.
               </p>
 
               {/* Contact Info */}
@@ -87,7 +87,7 @@ export default function Footer() {
 
             {/* Product Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Product</h3>
+              <h3 className="text-lg font-semibold mb-6">Mental Age Test</h3>
               <ul className="space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.name}>
@@ -162,7 +162,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 MentalAge. All rights reserved. Built with privacy and security in mind.
+              © 2024 MentalAge Test. All rights reserved. Free mental age quiz built with privacy and security in mind.
             </div>
 
             {/* Social Links */}
@@ -187,7 +187,7 @@ export default function Footer() {
             <div className="flex flex-wrap items-center justify-center gap-8 text-xs text-gray-500">
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                SSL Secured
+                SSL Secured Mental Age Test
               </div>
               <div className="flex items-center">
                 <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>

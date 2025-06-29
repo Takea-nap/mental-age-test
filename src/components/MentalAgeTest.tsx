@@ -9,11 +9,12 @@ import { getQuestions, type Question } from "@/lib/questions";
 interface MentalAgeTestProps {
   onComplete: (answers: number[]) => void;
   language?: 'zh' | 'en';
+  firstAnswer?: number; // 从Hero页面传递的第一个答案
 }
 
-export default function MentalAgeTest({ onComplete, language = 'zh' }: MentalAgeTestProps) {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<number[]>([]);
+export default function MentalAgeTest({ onComplete, language = 'zh', firstAnswer }: MentalAgeTestProps) {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(firstAnswer ? 1 : 0);
+  const [answers, setAnswers] = useState<number[]>(firstAnswer ? [firstAnswer] : []);
 
   const questions = getQuestions(language);
   const currentQuestion = questions[currentQuestionIndex];

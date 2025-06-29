@@ -9,7 +9,7 @@ export default function Testimonials() {
       role: "Marketing Director",
       age: "32",
       mentalAge: "28",
-      content: "This test gave me incredible insights into my personality! I discovered that my mental age is younger than my actual age, which explains my creative thinking and optimistic outlook. The results were surprisingly accurate.",
+      content: "This mental age test gave me incredible insights. The mental age quiz results were surprisingly accurate and helped me understand myself better.",
       rating: 5,
       avatar: "SJ",
       image: "/avatars/sarah-johnson.jpg"
@@ -19,7 +19,7 @@ export default function Testimonials() {
       role: "Software Engineer",
       age: "26",
       mentalAge: "31",
-      content: "I was skeptical at first, but the detailed analysis really opened my eyes. Learning that my mental age is older helped me understand why I prefer structured environments and long-term planning.",
+      content: "I was skeptical about this mental age test, but the analysis was eye-opening. This intellectual age test helped me understand my preference for structured environments.",
       rating: 5,
       avatar: "MC",
       image: "/avatars/michael-chen.jpg"
@@ -29,7 +29,7 @@ export default function Testimonials() {
       role: "Psychology Student",
       age: "22",
       mentalAge: "25",
-      content: "As someone studying psychology, I appreciate how well-designed this test is. The questions are thoughtful and the results provide actionable insights for personal development. Highly recommend!",
+      content: "I appreciate this well-designed mental age test. The mental health quiz questions are thoughtful and the results offer actionable insights.",
       rating: 5,
       avatar: "ER",
       image: "/avatars/emma-rodriguez.jpg"
@@ -39,7 +39,7 @@ export default function Testimonials() {
       role: "Retired Teacher",
       age: "58",
       mentalAge: "45",
-      content: "The test results confirmed what I always felt - I'm young at heart! It's fascinating how mental age can differ from chronological age. This tool is perfect for self-reflection and understanding.",
+      content: "The mental age test results confirmed I'm young at heart. This mental maturity test is a perfect tool for self-reflection.",
       rating: 5,
       avatar: "DT",
       image: "/avatars/david-thompson.jpg"
@@ -49,7 +49,7 @@ export default function Testimonials() {
       role: "Entrepreneur",
       age: "35",
       mentalAge: "38",
-      content: "Taking this test with my team was a great team-building exercise. We learned so much about each other's thinking patterns and it helped improve our communication and collaboration.",
+      content: "Taking this mental age test with my team was a great exercise. We learned about each other's thinking patterns through this mental health quiz.",
       rating: 5,
       avatar: "LP",
       image: "/avatars/lisa-park.jpg"
@@ -62,10 +62,10 @@ export default function Testimonials() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            What People Are Saying
+            What People Say About Our Mental Age Test
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Join thousands of satisfied users who have discovered valuable insights about their mental age and cognitive patterns.
+            Join thousands of satisfied users who have discovered valuable insights through our mental health quiz and intellectual age assessment.
           </p>
         </div>
 
@@ -151,24 +151,24 @@ export default function Testimonials() {
         <div className="bg-gray-50 rounded-3xl p-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
-              Trusted by Leading Organizations
+              Our Mental Age Test Trusted by Leading Organizations
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 opacity-60">
               <div className="text-center">
                 <div className="text-lg font-semibold text-gray-600">Universities</div>
-                <div className="text-sm text-gray-500">50+ Research Partners</div>
+                <div className="text-sm text-gray-500">50+ Mental Age Research Partners</div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold text-gray-600">Corporations</div>
-                <div className="text-sm text-gray-500">HR Development</div>
+                <div className="text-sm text-gray-500">HR Development & Personality Testing</div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold text-gray-600">Therapists</div>
-                <div className="text-sm text-gray-500">Clinical Use</div>
+                <div className="text-sm text-gray-500">Clinical Mental Health Use</div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-semibold text-gray-600">Media</div>
-                <div className="text-sm text-gray-500">Featured Coverage</div>
+                <div className="text-sm text-gray-500">Featured Mental Age Coverage</div>
               </div>
             </div>
           </div>

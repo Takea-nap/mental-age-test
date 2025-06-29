@@ -103,8 +103,9 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
               </span>
               <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.logical}%</span>
             </div>
-            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
-              <div style="height: 100%; width: ${scores.logical}%; background: linear-gradient(90deg, #a855f7, #d946ef); border-radius: 8px; box-shadow: 0 2px 4px rgba(168,85,247,0.3);"></div>
+            <div style="width: 100%; height: 16px; position: relative;">
+              <div style="height: 100%; width: 100%; background: #e5e7eb; border-radius: 8px; position: absolute; top: 0; left: 0;"></div>
+              <div style="height: 100%; width: ${scores.logical}%; background: linear-gradient(90deg, #a855f7, #d946ef); border-radius: 8px 0 0 8px; position: absolute; top: 0; left: 0; z-index: 1;"></div>
             </div>
           </div>
 
@@ -116,8 +117,9 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
               </span>
               <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.emotional}%</span>
             </div>
-            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
-              <div style="height: 100%; width: ${scores.emotional}%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 8px; box-shadow: 0 2px 4px rgba(59,130,246,0.3);"></div>
+            <div style="width: 100%; height: 16px; position: relative;">
+              <div style="height: 100%; width: 100%; background: #e5e7eb; border-radius: 8px; position: absolute; top: 0; left: 0;"></div>
+              <div style="height: 100%; width: ${scores.emotional}%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 8px 0 0 8px; position: absolute; top: 0; left: 0; z-index: 1;"></div>
             </div>
           </div>
 
@@ -129,8 +131,9 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
               </span>
               <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.experience}%</span>
             </div>
-            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
-              <div style="height: 100%; width: ${scores.experience}%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 8px; box-shadow: 0 2px 4px rgba(16,185,129,0.3);"></div>
+            <div style="width: 100%; height: 16px; position: relative;">
+              <div style="height: 100%; width: 100%; background: #e5e7eb; border-radius: 8px; position: absolute; top: 0; left: 0;"></div>
+              <div style="height: 100%; width: ${scores.experience}%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 8px 0 0 8px; position: absolute; top: 0; left: 0; z-index: 1;"></div>
             </div>
           </div>
         </div>
@@ -143,7 +146,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
         </div>
 
         <!-- 水印 -->
-        <div style="position: absolute; bottom: 30px; right: 24px; color:rgb(37, 105, 240); font-size: 24px; font-weight: 500;">
+        <div style="position: absolute; bottom: 20px; right: 20px; color: rgb(37, 105, 240); font-size: 24px; font-weight: 600; opacity: 0.8;">
           created by mental-age-test.app
         </div>
       </div>

@@ -17,53 +17,53 @@ export default function FAQ() {
 
   const faqCategories = [
     {
-      category: "About the Test",
+      category: "About the Mental Age Test",
       questions: [
         {
-          question: "What exactly is a mental age test?",
-          answer: "A mental age test assesses your cognitive and emotional maturity compared to typical developmental patterns. Unlike IQ tests that measure intelligence, mental age evaluates how your thinking patterns, decision-making, and emotional responses align with different age groups. It considers factors like wisdom, life perspective, problem-solving approaches, and emotional regulation."
+          question: "What is a mental age test and how does it function?",
+          answer: "A mental age test evaluates your cognitive and emotional maturity. Our mental age quiz assesses your thought processes and decision-making. This intellectual age test examines wisdom, life perspective, and problem-solving skills."
         },
         {
-          question: "How accurate are the results?",
-          answer: "Our test is based on established psychological research and has been validated with over 2 million users. While no online assessment can replace professional psychological evaluation, our algorithm achieves 95%+ accuracy in predicting personality traits and cognitive patterns compared to standardized psychological assessments."
+          question: "How reliable are the results from this mental age test?",
+          answer: "Our mental age test is founded on established psychological research. While no online mental health quiz can replace a professional evaluation, our mental age quiz's algorithm demonstrates over 95% accuracy in forecasting personality traits. This mental maturity test delivers results comparable to the IDRlabs test."
         },
         {
-          question: "How long does the test take?",
-          answer: "The complete assessment takes 5-10 minutes. We designed it to be comprehensive yet respectful of your time. The test includes 25-30 questions covering logical reasoning, emotional intelligence, life preferences, and decision-making scenarios."
+          question: "What is the duration of the mental age quiz?",
+          answer: "The mental age test can be completed in 5-10 minutes. The mental age quiz consists of 25-30 questions that explore logical reasoning, emotional intelligence, and life preferences, similar to a personality disorder test."
         }
       ]
     },
     {
-      category: "Privacy & Security",
+      category: "Privacy & Security of Mental Age Test",
       questions: [
         {
-          question: "Is my personal information safe?",
-          answer: "Absolutely. We use bank-level encryption to protect all data. Your test responses are anonymized and never linked to personal identifiers. We don't sell, share, or use your data for advertising. You can delete your data at any time, and we comply with GDPR, CCPA, and other privacy regulations."
+          question: "Is the information from my mental age test kept confidential?",
+          answer: "Yes, we use industry-standard encryption to safeguard all data from the mental age test. Responses from your mental age quiz are anonymized and not associated with any personal identifiers."
         },
         {
-          question: "Do I need to create an account?",
-          answer: "No account is required for the basic test. You can take the assessment immediately and receive your results without providing any personal information. Creating an optional account allows you to save results, retake the test later, and access additional features."
+          question: "Is account creation necessary for the mental age test?",
+          answer: "No, an account is not mandatory for the basic mental age test. You can begin the mental age quiz promptly and obtain your intellectual age results without submitting personal details."
         },
         {
-          question: "What data do you collect?",
-          answer: "We only collect your test responses and basic technical information (device type, browser). No personal information like name, email, or location is required for the basic test. If you choose premium features, we may collect contact information solely for delivering your detailed report."
+          question: "What information is gathered during the mental age quiz?",
+          answer: "We exclusively collect your answers from the mental age test and non-personal technical data. No personally identifiable information is needed for our basic mental age quiz."
         }
       ]
     },
     {
-      category: "Results & Interpretation",
+      category: "Mental Age Test Results & Interpretation",
       questions: [
         {
-          question: "What if my mental age is very different from my actual age?",
-          answer: "This is completely normal! Mental age differences can range from 5-15 years above or below chronological age. A younger mental age often indicates creativity, optimism, and adaptability. An older mental age suggests wisdom, stability, and mature judgment. Both have unique advantages in different life situations."
+          question: "What does it signify if my mental age differs greatly from my actual age?",
+          answer: "It is common for mental age test results to vary. A younger mental age may suggest creativity, while an older mental age can indicate wisdom. Both outcomes from our mental age test have their own advantages."
         },
         {
-          question: "Can I retake the test?",
-          answer: "Yes, but we recommend waiting at least 3-6 months between tests for meaningful results. Your mental age can change based on life experiences, stress levels, and personal growth. Frequent retesting might not show significant changes and could lead to inconsistent results."
+          question: "Is it possible to retake the mental age test for different outcomes?",
+          answer: "Yes, but we suggest waiting 3-6 months between each mental age test for meaningful results. Your mental age can evolve with life experiences. This approach to our mental maturity test ensures a reliable intellectual age assessment."
         },
         {
-          question: "How should I interpret my results?",
-          answer: "Your mental age results should be viewed as insights for self-reflection, not absolute truth. Use them to understand your thinking patterns, strengths, and areas for growth. The detailed reports provide specific recommendations for personal development, career choices, and relationship insights based on your cognitive profile."
+          question: "How should I understand my mental age test results and the meaning of my mental age?",
+          answer: "Your mental age test results are best used as a tool for self-discovery. Use the insights from our mental age quiz to better understand your thought patterns and identify strengths."
         }
       ]
     }
@@ -75,10 +75,10 @@ export default function FAQ() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Frequently Asked Questions
+            Mental Age Test - Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600">
-            Everything you need to know about our mental age assessment
+            Everything you need to know about our free mental age test and mental health quiz assessment
           </p>
         </div>
 
@@ -134,10 +134,10 @@ export default function FAQ() {
         {/* Contact Section */}
         <div className="mt-20 bg-gray-50 rounded-3xl p-12 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Still Have Questions?
+            Still Have Questions About Our Mental Age Test?
           </h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Our support team is here to help. Reach out if you need assistance with your test results, technical issues, or have questions about our methodology.
+            Our support team is here to help with your mental age quiz experience. Reach out if you need assistance with your mental age test results, technical issues, or have questions about our mental health quiz methodology.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

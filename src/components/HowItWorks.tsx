@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   Play,
   FileText,
@@ -14,30 +15,30 @@ export default function HowItWorks() {
     {
       step: "1",
       icon: Play,
-      title: "Start the Test",
-      description: "Click the button to begin your mental age assessment. No registration required - just jump right in and start discovering your cognitive age.",
-      details: ["No personal information needed", "Instant access", "Works on all devices"]
+      title: "Start the Mental Age Test",
+      description: "Begin your free mental age test with one click. This mental age quiz is a quick and easy age test to discover your intellectual age.",
+      details: ["No personal information needed", "Instant access to mental age test", "Works on all devices"]
     },
     {
       step: "2",
       icon: FileText,
-      title: "Answer Questions",
-      description: "Complete 20-30 carefully designed questions covering logical reasoning, emotional intelligence, life preferences, and cognitive patterns.",
-      details: ["5-10 minutes to complete", "Multiple choice format", "No time pressure"]
+      title: "Answer Mental Health Quiz Questions",
+      description: "Complete a series of mental age test questions. Our mental health quiz is similar to a character disorder test, ensuring a comprehensive evaluation.",
+      details: ["5-10 minutes to complete mental age quiz", "Multiple choice format", "No time pressure for this age test"]
     },
     {
       step: "3",
       icon: BarChart3,
-      title: "Get Your Results",
-      description: "Receive your detailed mental age analysis with insights into your cognitive maturity, personality traits, and development areas.",
-      details: ["Instant results", "Detailed breakdown", "Personalized insights"]
+      title: "Get Your Mental Age Results",
+      description: "Receive your detailed mental age analysis. Our mental maturity test provides insights into your cognitive and emotional age.",
+      details: ["Instant mental age test results", "Detailed breakdown", "Personalized insights like IDRlabs test"]
     },
     {
       step: "4",
       icon: Share2,
-      title: "Share & Compare",
-      description: "Share your results with friends, compare with others, and explore how your mental age relates to your chronological age.",
-      details: ["Social media sharing", "Privacy controls", "Group comparisons"]
+      title: "Share & Compare Mental Age",
+      description: "Share your mental age test results with friends. This 'a real me mental age test' experience helps you understand yourself and others.",
+      details: ["Social media sharing of mental age quiz", "Privacy controls", "Group comparisons with other age test takers"]
     }
   ];
 
@@ -47,10 +48,10 @@ export default function HowItWorks() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            How It Works
+            How Our Mental Age Test Works
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Take your mental age test in just four simple steps. Our streamlined process ensures accurate results while respecting your time and privacy.
+            Take our mental age test in four simple steps. Our mental health quiz ensures accurate intellectual age results while respecting your time and privacy.
           </p>
         </div>
 
@@ -97,22 +98,24 @@ export default function HowItWorks() {
                 Ready to Discover Your Mental Age?
               </h3>
               <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-                Join millions of users who have already discovered their cognitive age. Our test is trusted by psychologists, researchers, and curious minds worldwide.
+                Join millions of users who have already discovered their cognitive age with our mental age test. Our mental health quiz is trusted by psychologists, researchers, and curious minds worldwide. This free mental age quiz provides the best personality test experience similar to understand myself.com.
               </p>
-              <Button
-                size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-xl"
-              >
-                Take Test Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/#home">
+                <Button
+                  size="lg"
+                  className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold rounded-xl"
+                >
+                  Start Test Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
 
             <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8">
               <div className="text-center">
                 <div className="text-6xl font-bold text-gray-900 mb-2">23</div>
                 <div className="text-lg text-gray-600 mb-4">Your Mental Age</div>
-                <div className="text-sm text-gray-500 mb-6">Based on your responses</div>
+                <div className="text-sm text-gray-500 mb-6">Based on your mental age test responses</div>
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
