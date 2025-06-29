@@ -43,6 +43,13 @@ export default function Analytics({ gtag, clarityId }: AnalyticsProps) {
           `}
         </Script>
       )}
+
+      {/* ImgPop Analytics */}
+      <Script
+        src="https://imgpop.online/js/script.js"
+        data-domain="mental-age-test.app"
+        strategy="afterInteractive"
+      />
     </>
   );
 } 
