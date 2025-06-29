@@ -186,7 +186,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
         await navigator.share({
           title: language === 'zh' ? '心理年龄测试结果' : 'Mental Age Test Result',
           text: shareText,
-          url: window.location.origin + '/test'
+          url: window.location.origin + '/mental-test'
         });
       } catch (err) {
         console.log('Error sharing:', err);

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mental-age-test.app/test",
+          url: "https://mental-age-test.app/mental-test",
     title: "Free Mental Age Test - Take Our Mental Age Quiz Online",
     description: "Discover your mental age with our free mental age test. This comprehensive mental health quiz and personality disorder test reveals your intellectual age and cognitive maturity level.",
     siteName: "Mental Age Test",
@@ -60,10 +60,10 @@ export const metadata: Metadata = {
     creator: "@mentalagetest",
   },
   alternates: {
-    canonical: "https://yourdomain.com/test",
+    canonical: "https://yourdomain.com/mental-test",
     languages: {
-      'en-US': 'https://yourdomain.com/test',
-      'zh-CN': 'https://yourdomain.com/test',
+      'en-US': 'https://yourdomain.com/mental-test',
+      'zh-CN': 'https://yourdomain.com/mental-test',
     },
   },
   category: "Psychology",
@@ -90,7 +90,7 @@ export default function TestLayout({
             "@type": "WebApplication",
             "name": "Mental Age Test - Free Mental Age Quiz",
             "description": "A scientifically-designed mental age test and mental health quiz to assess psychological maturity, intellectual age, and cognitive development. Discover what is my mental age with our comprehensive personality disorder test.",
-            "url": "https://mental-age-test.app/test",
+            "url": "https://mental-age-test.app/mental-test",
             "applicationCategory": "HealthApplication",
             "operatingSystem": "Web Browser",
             "offers": {

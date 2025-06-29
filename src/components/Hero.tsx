@@ -13,7 +13,7 @@ export default function Hero() {
 
   const handleAnswerSelect = (value: number) => {
     // 将答案作为查询参数传递到test页面
-    router.push(`/test?firstAnswer=${value}`);
+    router.push(`/mental-test?firstAnswer=${value}`);
   };
 
   return (
