@@ -14,10 +14,10 @@ import {
 export default function Footer() {
   const footerLinks = {
     product: [
-      { name: "Take Test", href: "#home" },
-      { name: "How It Works", href: "#how-it-works" },
-      { name: "Features", href: "#features" },
-      { name: "Pricing", href: "#pricing" },
+      { name: "Take Test", href: "/#home" },
+      { name: "How It Works", href: "/#how-it-works" },
+      { name: "Features", href: "/#features" },
+      { name: "Pricing", href: "/#pricing" },
       { name: "FAQ", href: "#faq" }
     ],
     company: [
