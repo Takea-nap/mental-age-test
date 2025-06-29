@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import {
+  Github,
   Facebook,
   Twitter,
   Instagram,
@@ -33,11 +34,8 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "https://facebook.com" },
-    { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-    { name: "Instagram", icon: Instagram, href: "https://instagram.com" },
-    { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-    { name: "YouTube", icon: Youtube, href: "https://youtube.com" }
+    { name: "Github", icon: Github, href: "https://github.com/Takea-nap/mental-age-test" },
+    { name: "Pinterest", icon: MapPin, href: "https://www.pinterest.com/mentalagetest/" },
   ];
 
   return (

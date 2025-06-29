@@ -3,9 +3,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Download, Share2, RotateCcw } from "lucide-react";
+import { Download, Share2, RotateCcw, Copy, MessageCircle } from "lucide-react";
 import { getMentalAgeDescription } from "@/lib/utils";
 import html2canvas from "html2canvas";
+import { useState } from "react";
 
 interface TestResultProps {
   mentalAge: number;
@@ -13,7 +14,65 @@ interface TestResultProps {
   language?: 'zh' | 'en';
 }
 
+// 社媒平台配置类型
+interface SocialPlatform {
+  name: string;
+  icon: string;
+  color: string;
+  baseUrl?: string;
+  action?: string;
+}
+
+// 社媒平台配置
+const socialPlatforms: Record<string, SocialPlatform> = {
+  wechat: {
+    name: '微信',
+    icon: '💬',
+    color: 'bg-green-500 hover:bg-green-600',
+    action: 'copy'
+  },
+  weibo: {
+    name: '微博',
+    icon: '🔆',
+    color: 'bg-red-500 hover:bg-red-600',
+    baseUrl: 'https://service.weibo.com/share/share.php'
+  },
+  qq: {
+    name: 'QQ空间',
+    icon: '🐧',
+    color: 'bg-blue-500 hover:bg-blue-600',
+    baseUrl: 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey'
+  },
+  twitter: {
+    name: 'Twitter',
+    icon: '🐦',
+    color: 'bg-sky-500 hover:bg-sky-600',
+    baseUrl: 'https://twitter.com/intent/tweet'
+  },
+  facebook: {
+    name: 'Facebook',
+    icon: '📘',
+    color: 'bg-blue-600 hover:bg-blue-700',
+    baseUrl: 'https://www.facebook.com/sharer/sharer.php'
+  },
+  telegram: {
+    name: 'Telegram',
+    icon: '✈️',
+    color: 'bg-sky-400 hover:bg-sky-500',
+    baseUrl: 'https://t.me/share/url'
+  },
+  linkedin: {
+    name: 'LinkedIn',
+    icon: '💼',
+    color: 'bg-blue-700 hover:bg-blue-800',
+    baseUrl: 'https://www.linkedin.com/sharing/share-offsite/'
+  }
+};
+
 export default function TestResult({ mentalAge, onRestart, language = 'zh' }: TestResultProps) {
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [copied, setCopied] = useState(false);
+  
   const description = getMentalAgeDescription(mentalAge, language);
 
   const texts = {
@@ -26,7 +85,14 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
       lifeExperience: "生活阅历",
       tryAgain: "再测一次",
       export: "导出图片",
-      share: "分享结果"
+      share: "分享结果",
+      shareToSocial: "分享到社交媒体",
+      copyLink: "复制链接",
+      copied: "已复制！",
+      shareText: "我刚测了心理年龄，结果是",
+      shareDescription: "这个心理年龄测试超准的！你也来试试看👇",
+      wechatTip: "微信分享：链接已复制，可在微信中粘贴分享",
+      testUrl: "快来测测你的心理年龄"
     },
     en: {
       completed: "Test Completed!",
@@ -37,7 +103,14 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
       lifeExperience: "Life Experience",
       tryAgain: "Try Again",
       export: "Export Image",
-      share: "Share Result"
+      share: "Share Result",
+      shareToSocial: "Share to Social Media",
+      copyLink: "Copy Link",
+      copied: "Copied!",
+      shareText: "I just took a mental age test and got",
+      shareDescription: "This mental age test is so accurate! Try it yourself👇",
+      wechatTip: "WeChat sharing: Link copied, paste in WeChat to share",
+      testUrl: "Take the Mental Age Test"
     }
   };
 
@@ -64,6 +137,80 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
   };
 
   const scores = getScores(mentalAge);
+
+  // 生成分享文本和链接
+  const generateShareContent = () => {
+    const baseUrl = window.location.origin;
+    const testUrl = `${baseUrl}/mental-test`;
+    const shareText = `${texts[language].shareText} ${mentalAge} 岁！${description} ${texts[language].shareDescription}`;
+    const englishShareText = `${texts[language].shareText} ${mentalAge} years old! ${description} ${texts[language].shareDescription}`;
+    
+    return {
+      text: language === 'zh' ? shareText : englishShareText,
+      url: testUrl,
+      title: language === 'zh' ? '心理年龄测试结果' : 'Mental Age Test Result'
+    };
+  };
+
+  // 处理社媒分享
+  const handleSocialShare = async (platform: string) => {
+    const shareContent = generateShareContent();
+    const platformConfig = socialPlatforms[platform];
+    
+    if (platform === 'wechat') {
+      // 微信分享：复制链接到剪贴板
+      try {
+        await navigator.clipboard.writeText(`${shareContent.text} ${shareContent.url}`);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+        alert(texts[language].wechatTip);
+      } catch (err) {
+        console.error('复制失败:', err);
+      }
+      return;
+    }
+
+    if (!platformConfig?.baseUrl) return;
+
+    let shareUrl = '';
+    
+    switch (platform) {
+      case 'weibo':
+        shareUrl = `${platformConfig.baseUrl}?url=${encodeURIComponent(shareContent.url)}&title=${encodeURIComponent(shareContent.text)}&pic=&searchPic=false`;
+        break;
+      case 'qq':
+        shareUrl = `${platformConfig.baseUrl}?url=${encodeURIComponent(shareContent.url)}&title=${encodeURIComponent(shareContent.text)}&desc=${encodeURIComponent(description)}&summary=${encodeURIComponent(shareContent.text)}&site=${encodeURIComponent('mental-age-test.app')}`;
+        break;
+      case 'twitter':
+        shareUrl = `${platformConfig.baseUrl}?text=${encodeURIComponent(shareContent.text)}&url=${encodeURIComponent(shareContent.url)}`;
+        break;
+      case 'facebook':
+        shareUrl = `${platformConfig.baseUrl}?u=${encodeURIComponent(shareContent.url)}&quote=${encodeURIComponent(shareContent.text)}`;
+        break;
+      case 'telegram':
+        shareUrl = `${platformConfig.baseUrl}?url=${encodeURIComponent(shareContent.url)}&text=${encodeURIComponent(shareContent.text)}`;
+        break;
+      case 'linkedin':
+        shareUrl = `${platformConfig.baseUrl}?url=${encodeURIComponent(shareContent.url)}&title=${encodeURIComponent(shareContent.title)}&summary=${encodeURIComponent(shareContent.text)}`;
+        break;
+    }
+
+    if (shareUrl) {
+      window.open(shareUrl, '_blank', 'width=600,height=400,scrollbars=yes,resizable=yes');
+    }
+  };
+
+  // 复制链接
+  const handleCopyLink = async () => {
+    const shareContent = generateShareContent();
+    try {
+      await navigator.clipboard.writeText(`${shareContent.text} ${shareContent.url}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('复制失败:', err);
+    }
+  };
 
   const handleExport = () => {
     // 创建一个用于导出的元素
@@ -178,38 +325,23 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
     });
   };
 
-  const handleShare = async () => {
-    const shareText = `${texts[language].yourAge}: ${mentalAge}! ${description}`;
+  // 原生分享 API 后备方案
+  const handleNativeShare = async () => {
+    const shareContent = generateShareContent();
     
     if (navigator.share) {
       try {
         await navigator.share({
-          title: language === 'zh' ? '心理年龄测试结果' : 'Mental Age Test Result',
-          text: shareText,
-          url: window.location.origin + '/mental-test'
+          title: shareContent.title,
+          text: shareContent.text,
+          url: shareContent.url
         });
       } catch (err) {
         console.log('Error sharing:', err);
-        fallbackShare(shareText);
+        setShowShareModal(true);
       }
     } else {
-      fallbackShare(shareText);
-    }
-  };
-
-  const fallbackShare = (text: string) => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert(language === 'zh' ? '结果已复制到剪贴板！' : 'Result copied to clipboard!');
-      });
-    } else {
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textArea);
-      alert(language === 'zh' ? '结果已复制到剪贴板！' : 'Result copied to clipboard!');
+      setShowShareModal(true);
     }
   };
 
@@ -310,7 +442,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
             </Button>
             
             <Button 
-              onClick={handleShare}
+              onClick={handleNativeShare}
               variant="outline"
               size="lg"
               className="flex-1 flex items-center justify-center gap-2 border-gray-300 hover:bg-gray-50"
@@ -321,6 +453,50 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
           </div>
         </CardContent>
       </Card>
+
+      {/* 分享模态框 */}
+      {showShareModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50" onClick={() => setShowShareModal(false)}>
+          <div className="bg-white rounded-2xl p-6 w-full max-w-md" onClick={e => e.stopPropagation()}>
+            <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+              {texts[language].shareToSocial}
+            </h3>
+            
+            {/* 社媒平台按钮网格 */}
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              {Object.entries(socialPlatforms).map(([key, platform]) => (
+                <Button
+                  key={key}
+                  onClick={() => handleSocialShare(key)}
+                  className={`${platform.color} text-white border-0 h-12 text-sm font-medium transition-all duration-200 hover:scale-105`}
+                >
+                  <span className="mr-2 text-lg">{platform.icon}</span>
+                  {platform.name}
+                </Button>
+              ))}
+            </div>
+
+            {/* 复制链接按钮 */}
+            <Button
+              onClick={handleCopyLink}
+              variant="outline"
+              className="w-full h-12 border-gray-300 hover:bg-gray-50 transition-all duration-200"
+            >
+              <Copy className="w-4 h-4 mr-2" />
+              {copied ? texts[language].copied : texts[language].copyLink}
+            </Button>
+
+            {/* 关闭按钮 */}
+            <Button
+              onClick={() => setShowShareModal(false)}
+              variant="ghost"
+              className="w-full mt-4 text-gray-500 hover:text-gray-700"
+            >
+              关闭
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 } 
