@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Star, Quote } from "lucide-react";
 
 export default function Testimonials() {
@@ -11,7 +11,8 @@ export default function Testimonials() {
       mentalAge: "28",
       content: "This test gave me incredible insights into my personality! I discovered that my mental age is younger than my actual age, which explains my creative thinking and optimistic outlook. The results were surprisingly accurate.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "SJ",
+      image: "/avatars/sarah-johnson.jpg"
     },
     {
       name: "Michael Chen",
@@ -20,7 +21,8 @@ export default function Testimonials() {
       mentalAge: "31",
       content: "I was skeptical at first, but the detailed analysis really opened my eyes. Learning that my mental age is older helped me understand why I prefer structured environments and long-term planning.",
       rating: 5,
-      avatar: "MC"
+      avatar: "MC",
+      image: "/avatars/michael-chen.jpg"
     },
     {
       name: "Emma Rodriguez",
@@ -29,7 +31,8 @@ export default function Testimonials() {
       mentalAge: "25",
       content: "As someone studying psychology, I appreciate how well-designed this test is. The questions are thoughtful and the results provide actionable insights for personal development. Highly recommend!",
       rating: 5,
-      avatar: "ER"
+      avatar: "ER",
+      image: "/avatars/emma-rodriguez.jpg"
     },
     {
       name: "David Thompson",
@@ -38,7 +41,8 @@ export default function Testimonials() {
       mentalAge: "45",
       content: "The test results confirmed what I always felt - I'm young at heart! It's fascinating how mental age can differ from chronological age. This tool is perfect for self-reflection and understanding.",
       rating: 5,
-      avatar: "DT"
+      avatar: "DT",
+      image: "/avatars/david-thompson.jpg"
     },
     {
       name: "Lisa Park",
@@ -47,7 +51,8 @@ export default function Testimonials() {
       mentalAge: "38",
       content: "Taking this test with my team was a great team-building exercise. We learned so much about each other's thinking patterns and it helped improve our communication and collaboration.",
       rating: 5,
-      avatar: "LP"
+      avatar: "LP",
+      image: "/avatars/lisa-park.jpg"
     }
   ];
 
@@ -87,6 +92,7 @@ export default function Testimonials() {
                 {/* User Info */}
                 <div className="flex items-center">
                   <Avatar className="h-12 w-12 mr-4">
+                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
                     <AvatarFallback className="bg-gray-200 text-gray-600 font-semibold">
                       {testimonial.avatar}
                     </AvatarFallback>
@@ -123,6 +129,7 @@ export default function Testimonials() {
 
                 <div className="flex items-center">
                   <Avatar className="h-12 w-12 mr-4">
+                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
                     <AvatarFallback className="bg-gray-200 text-gray-600 font-semibold">
                       {testimonial.avatar}
                     </AvatarFallback>
