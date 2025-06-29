@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -66,9 +67,11 @@ export default function Header() {
                   </a>
                 ))}
                 <div className="pt-4">
+                  <Link href="/mental-test">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white">
                     Start Test Now
                   </Button>
+                  </Link>
                 </div>
               </nav>
             </SheetContent>

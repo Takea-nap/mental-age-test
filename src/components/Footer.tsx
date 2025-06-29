@@ -27,19 +27,9 @@ export default function Footer() {
       { name: "Press Kit", href: "/press" },
       { name: "Contact", href: "/contact" }
     ],
-    resources: [
-      { name: "Mental Age Blog", href: "/blog" },
-      { name: "Psychology Guide", href: "/guide" },
-      { name: "Help Center", href: "/help" },
-      { name: "API Documentation", href: "/api" },
-      { name: "Download App", href: "/app" }
-    ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
-      { name: "Data Protection", href: "/data-protection" },
-      { name: "GDPR Compliance", href: "/gdpr" }
     ]
   };
 
@@ -53,7 +43,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -67,22 +57,6 @@ export default function Footer() {
                 Discover your intellectual age through our scientifically-designed mental age test and mental health quiz assessment.
                 Trusted by millions worldwide for accurate personality insights, mental age analysis, and cognitive maturity evaluation. Take our free mental age quiz to understand what is my mental age.
               </p>
-
-              {/* Contact Info */}
-              <div className="space-y-3 text-sm text-gray-400">
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  support@mentalage.com
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 (555) 123-4567
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  San Francisco, CA
-                </div>
-              </div>
             </div>
 
             {/* Product Links */}
@@ -102,39 +76,8 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Company Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Company</h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
 
-            {/* Resources Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Resources</h3>
-              <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             {/* Legal Links */}
             <div>
@@ -151,6 +94,25 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Contact Us */}
+            <div>
+              <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
+              <div className="space-y-3 text-sm text-gray-400">
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2" />
+                  support@mentalage.com
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2" />
+                  +1 (555) 123-4567
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-4 h-4 mr-2" />
+                  San Francisco, CA
+                </div>
+              </div>
             </div>
           </div>
         </div>

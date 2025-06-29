@@ -1,27 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Mental Age Test - Take Our Mental Age Quiz | Discover Your Intellectual Age",
-  description: "Take our free mental age test and mental health quiz to discover your cognitive maturity. This comprehensive personality disorder test and intellectual age assessment reveals what is my mental age with scientific accuracy. Compare your mental age quiz results with others.",
-  keywords: [
-    "mental age test",
-    "mental age quiz", 
-    "intellectual age test",
-    "personality disorder test",
-    "mental health quiz",
-    "what is my mental age",
-    "mental maturity test",
-    "free mental age test",
-    "cognitive age assessment",
-    "personality problems test",
-    "character disorder test",
-    "a real me mental age",
-    "age test",
-    "mental age test free",
-    "idrlabs test",
-    "understand myself.com",
-    "best personality test"
-  ],
+  title: "Free Mental Age Test - Take Our Mental Age Quiz",
+  description: "Take our free mental age test and mental health quiz to discover your cognitive maturity.",
   authors: [{ name: "Mental Age Test Team" }],
   creator: "Mental Age Test",
   publisher: "Mental Age Test",
