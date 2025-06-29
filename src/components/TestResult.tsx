@@ -69,8 +69,8 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
     // 创建一个用于导出的元素
     const exportElement = document.createElement('div');
     exportElement.style.cssText = `
-      width: 800px;
-      padding: 60px;
+      width: 900px;
+      padding: 80px;
       background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 100%);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       position: fixed;
@@ -79,71 +79,71 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
     `;
     
     exportElement.innerHTML = `
-      <div style="background: rgba(255, 255, 255, 0.9); border-radius: 24px; padding: 48px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(16px); position: relative;">
+      <div style="background: rgba(255, 255, 255, 0.95); border-radius: 24px; padding: 60px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(16px); position: relative;">
         <!-- 主要结果显示 -->
-        <div style="text-align: center; margin-bottom: 48px;">
-          <div style="font-size: 120px; font-weight: 900; color: #111827; margin-bottom: 16px; line-height: 1;">
+        <div style="text-align: center; margin-bottom: 60px;">
+          <div style="font-size: 140px; font-weight: 900; color: #000000; margin-bottom: 20px; line-height: 1; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             ${mentalAge}
           </div>
-          <h2 style="font-size: 32px; font-weight: 600; color: #374151; margin-bottom: 8px; margin-top: 0;">
+          <h2 style="font-size: 36px; font-weight: 700; color: #1f2937; margin-bottom: 12px; margin-top: 0;">
             ${texts[language].yourAge}
           </h2>
-          <p style="color: #6b7280; font-size: 18px; margin: 0;">
+          <p style="color: #4b5563; font-size: 20px; margin: 0; font-weight: 500;">
             ${texts[language].basedOn}
           </p>
         </div>
 
         <!-- 维度分析 -->
-        <div style="margin-bottom: 48px;">
+        <div style="margin-bottom: 60px;">
           <!-- 逻辑思维 -->
-          <div style="margin-bottom: 32px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+          <div style="margin-bottom: 40px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-size: 24px; font-weight: 600; color: #1f2937;">
                 ${texts[language].logicalThinking}
               </span>
-              <span style="font-size: 16px; color: #6b7280;">${scores.logical}%</span>
+              <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.logical}%</span>
             </div>
-            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
-              <div style="height: 100%; width: ${scores.logical}%; background: linear-gradient(90deg, #a855f7, #d946ef); border-radius: 6px;"></div>
+            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+              <div style="height: 100%; width: ${scores.logical}%; background: linear-gradient(90deg, #a855f7, #d946ef); border-radius: 8px; box-shadow: 0 2px 4px rgba(168,85,247,0.3);"></div>
             </div>
           </div>
 
           <!-- 情感成熟度 -->
-          <div style="margin-bottom: 32px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+          <div style="margin-bottom: 40px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-size: 24px; font-weight: 600; color: #1f2937;">
                 ${texts[language].emotionalMaturity}
               </span>
-              <span style="font-size: 16px; color: #6b7280;">${scores.emotional}%</span>
+              <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.emotional}%</span>
             </div>
-            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
-              <div style="height: 100%; width: ${scores.emotional}%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 6px;"></div>
+            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+              <div style="height: 100%; width: ${scores.emotional}%; background: linear-gradient(90deg, #3b82f6, #1d4ed8); border-radius: 8px; box-shadow: 0 2px 4px rgba(59,130,246,0.3);"></div>
             </div>
           </div>
 
           <!-- 生活阅历 -->
-          <div style="margin-bottom: 32px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="font-size: 20px; font-weight: 500; color: #374151;">
+          <div style="margin-bottom: 40px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <span style="font-size: 24px; font-weight: 600; color: #1f2937;">
                 ${texts[language].lifeExperience}
               </span>
-              <span style="font-size: 16px; color: #6b7280;">${scores.experience}%</span>
+              <span style="font-size: 20px; color: #374151; font-weight: 600;">${scores.experience}%</span>
             </div>
-            <div style="width: 100%; height: 12px; background: #e5e7eb; border-radius: 6px; overflow: hidden;">
-              <div style="height: 100%; width: ${scores.experience}%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 6px;"></div>
+            <div style="width: 100%; height: 16px; background: #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+              <div style="height: 100%; width: ${scores.experience}%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 8px; box-shadow: 0 2px 4px rgba(16,185,129,0.3);"></div>
             </div>
           </div>
         </div>
 
         <!-- 描述文本 -->
         <div style="text-align: center;">
-          <p style="color: #4b5563; font-size: 18px; line-height: 1.6; margin: 0; max-width: 600px; margin: 0 auto;">
+          <p style="color: #374151; font-size: 20px; line-height: 1.6; margin: 0; max-width: 600px; margin: 0 auto; font-weight: 500;">
             ${description}
           </p>
         </div>
 
         <!-- 水印 -->
-        <div style="position: absolute; bottom: 20px; right: 20px; color: #9ca3af; font-size: 12px; font-weight: 400;">
+        <div style="position: absolute; bottom: 30px; right: 24px; color:rgb(37, 105, 240); font-size: 24px; font-weight: 500;">
           created by mental-age-test.app
         </div>
       </div>
@@ -157,7 +157,7 @@ export default function TestResult({ mentalAge, onRestart, language = 'zh' }: Te
       scale: 2, // 高分辨率
       useCORS: true,
       allowTaint: true,
-      width: 800,
+      width: 900,
       height: exportElement.offsetHeight
     }).then(canvas => {
       // 创建下载链接
