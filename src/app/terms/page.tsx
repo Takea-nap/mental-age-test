@@ -5,7 +5,7 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 pt-24">
         <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
         <div className="prose prose-lg max-w-none">
           <p>

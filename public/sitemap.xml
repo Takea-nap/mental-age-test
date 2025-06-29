@@ -12,4 +12,27 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://mental-age-test.app/intellectual-age-test</loc>
+    <lastmod>2025-06-29T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mental-age-test.app/more-tests</loc>
+    <lastmod>2025-06-29T10:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mental-age-test.app/policy</loc>
+    <lastmod>2025-06-29T10:00:00+00:00</lastmod>
+  </url>
+
+  <url>
+    <loc>https://mental-age-test.app/terms</loc>
+    <lastmod>2025-06-29T10:00:00+00:00</lastmod>
+  </url>
 </urlset>

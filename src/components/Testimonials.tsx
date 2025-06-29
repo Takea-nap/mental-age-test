@@ -148,7 +148,7 @@ export default function Testimonials() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="bg-gray-50 rounded-3xl p-12">
+        {/* <div className="bg-gray-50 rounded-3xl p-12">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Our Mental Age Test Trusted by Leading Organizations
@@ -172,7 +172,7 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

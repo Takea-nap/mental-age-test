@@ -140,22 +140,19 @@ export default function FAQ() {
             Our support team is here to help with your mental age quiz experience. Reach out if you need assistance with your mental age test results, technical issues, or have questions about our mental health quiz methodology.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
+          <div className="flex flex-col items-center">
+            <div className="mb-8">
               <div className="text-lg font-semibold text-gray-900 mb-2">Email Support</div>
-              <p className="text-gray-600">support@mentalage.com</p>
+              <p className="text-gray-600">support@mental-age-test.app</p>
               <p className="text-sm text-gray-500">Response within 24 hours</p>
             </div>
-            <div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Live Chat</div>
-              <p className="text-gray-600">Available 9 AM - 6 PM EST</p>
-              <p className="text-sm text-gray-500">Monday through Friday</p>
-            </div>
-            <div>
-              <div className="text-lg font-semibold text-gray-900 mb-2">Knowledge Base</div>
-              <p className="text-gray-600">Self-service articles</p>
-              <p className="text-sm text-gray-500">Available 24/7</p>
-            </div>
+            
+            <a
+              href="/mental-test"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              Take the Mental Age Test Now
+            </a>
           </div>
         </div>
       </div>

@@ -5,31 +5,30 @@ import {
   Instagram,
   Linkedin,
   Youtube,
-  Brain,
   Mail,
   MapPin,
   Phone
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const footerLinks = {
     product: [
       { name: "Take Mental Age Test", href: "/#home" },
-      { name: "How Mental Age Quiz Works", href: "/#how-it-works" },
-      { name: "Mental Age Test Features", href: "/#features" },
-      { name: "Pricing", href: "/#pricing" },
-      { name: "Mental Age Test FAQ", href: "#faq" }
-    ],
-    company: [
-      { name: "About Our Mental Age Test", href: "/about" },
-      { name: "Mental Age Research", href: "/research" },
-      { name: "Careers", href: "/careers" },
-      { name: "Press Kit", href: "/press" },
-      { name: "Contact", href: "/contact" }
+      { name: "How It Works", href: "/#how-it-works" },
+      { name: "Features", href: "/#features" },
+      { name: "FAQ", href: "#faq" }
     ],
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
+    ],
+    friendLinks: [
+      { name: "Psychology Today", href: "https://www.psychologytoday.com" },
+      { name: "Mind Tools", href: "https://www.mindtools.com" },
+      { name: "Cognitive Assessment", href: "https://www.cognitiveassessment.com" },
+      { name: "Mental Health", href: "https://www.mentalhealth.gov" },
+      { name: "Brain Training", href: "https://www.braintraining.com" }
     ]
   };
 
@@ -46,16 +45,21 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center mb-6">
-                <Brain className="w-8 h-8 mr-3 text-purple-500" />
+                <Image
+                  src="/logo.png"
+                  alt="Mental Age Test Logo"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 mr-3"
+                />
                 <span className="text-2xl font-bold">MentalAge Test</span>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
                 Discover your intellectual age through our scientifically-designed mental age test and mental health quiz assessment.
-                Trusted by millions worldwide for accurate personality insights, mental age analysis, and cognitive maturity evaluation. Take our free mental age quiz to understand what is my mental age.
               </p>
             </div>
 
@@ -76,9 +80,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            
-
-
             {/* Legal Links */}
             <div>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
@@ -96,24 +97,25 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Contact Us */}
+            {/* Friend Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
-              <div className="space-y-3 text-sm text-gray-400">
-                <div className="flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  support@mentalage.com
-                </div>
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 (555) 123-4567
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  San Francisco, CA
-                </div>
-              </div>
+              <h3 className="text-lg font-semibold mb-6">Friend Links</h3>
+              <ul className="space-y-3">
+                {footerLinks.friendLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-white transition-colors text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
+
           </div>
         </div>
 
@@ -124,7 +126,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 MentalAge Test. All rights reserved. Free mental age quiz built with privacy and security in mind.
+              © 2025 MentalAge Test. All rights reserved. Free mental age quiz built with privacy and security in mind.
             </div>
 
             {/* Social Links */}
@@ -144,27 +146,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Trust Badges */}
-          <div className="mt-8 pt-8 border-t border-gray-700">
-            <div className="flex flex-wrap items-center justify-center gap-8 text-xs text-gray-500">
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                SSL Secured Mental Age Test
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                GDPR Compliant
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-purple-500 rounded-full mr-2"></div>
-                SOC 2 Certified
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-orange-500 rounded-full mr-2"></div>
-                Privacy by Design
-              </div>
-            </div>
-          </div>
+        
         </div>
       </div>
     </footer>
