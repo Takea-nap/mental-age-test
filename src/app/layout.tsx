@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mental Age Test - Free Online Mental Age Quiz",
-  description: "Discover your cognitive maturity with our free mental age test. This quick quiz reveals your intellectual age and mental maturity based on scientific principles.",
+  description: "Discover your cognitive maturity with our free mental age test. This quick quiz reveals your intellectual age and mental maturity based on scientific principles",
   robots: "index, follow",
   openGraph: {
     title: "Mental Age Test - Discover Your True Cognitive Age",
