@@ -49,7 +49,7 @@ export default function MentalAgeTest({ onComplete, language = 'zh', firstAnswer
       setCanAnswer(false);
       setTimeout(() => {
         setCanAnswer(true);
-      }, 2000);
+      }, 500);
     } else {
       onComplete(newAnswers);
     }
