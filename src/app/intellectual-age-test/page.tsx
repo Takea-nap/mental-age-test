@@ -63,7 +63,7 @@ export default function IntellectualAgeTestPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-blue-600" />
-                Test Overview
+                <h2 className="text-2xl font-bold">Test Overview</h2>
               </CardTitle>
               <CardDescription>
                 This test covers 4 main cognitive domains, each containing multiple questions, totaling approximately 30 questions.
@@ -120,15 +120,15 @@ export default function IntellectualAgeTestPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-green-700">
                 <CheckCircle className="w-5 h-5" />
-                Test Instructions
+                <h2 className="text-2xl font-bold">Test Instructions</h2>
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900">Test Preparation</h4>
+                  <h3 className="font-semibold text-gray-900">Test Preparation</h3>
                   <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-start gap-2">
+                    <li className="flex items-start gap-2"> 
                       <div className="w-1.5 h-1.5 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
                       Find a quiet environment to avoid distractions
                     </li>
@@ -143,7 +143,7 @@ export default function IntellectualAgeTestPage() {
                   </ul>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900">Answer Requirements</h4>
+                  <h3 className="font-semibold text-gray-900">Answer Requirements</h3>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
@@ -186,7 +186,7 @@ export default function IntellectualAgeTestPage() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Lightbulb className="w-5 h-5 text-purple-600" />
-                Sample Questions
+                <h2 className="text-2xl font-bold">Sample Questions</h2>
               </CardTitle>
               <CardDescription>
                 Here are examples of some question types to help you understand the test content
@@ -195,7 +195,7 @@ export default function IntellectualAgeTestPage() {
             <CardContent>
               <div className="space-y-6">
                 <div className="p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-semibold text-blue-900 mb-2">Numerical Reasoning Example</h4>
+                  <h3 className="font-semibold text-blue-900 mb-2">Numerical Reasoning Example</h3>
                   <p className="text-blue-800 mb-3">Find the pattern in the sequence: 2, 6, 18, 54, ?</p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     <Button variant="outline" size="sm" className="text-blue-700">A. 108</Button>
@@ -206,7 +206,7 @@ export default function IntellectualAgeTestPage() {
                 </div>
                 
                 <div className="p-4 bg-green-50 rounded-lg">
-                  <h4 className="font-semibold text-green-900 mb-2">Logical Reasoning Example</h4>
+                  <h3 className="font-semibold text-green-900 mb-2">Logical Reasoning Example</h3>
                   <p className="text-green-800 mb-3">
                     If "All birds can fly" and "Penguins are birds" are both true, which of the following conclusions is correct?
                   </p>
