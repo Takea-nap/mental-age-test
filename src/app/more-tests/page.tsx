@@ -37,6 +37,14 @@ export default function MoreTestsPage() {
           duration: "10-15 minutes",
           popular: true,
           link: "#"
+        },
+        {
+          name: "Personality Disorder Test",
+          description: "Assess your personality traits and potential disorder tendencies",
+          difficulty: "Medium",
+          duration: "15-20 minutes",
+          popular: false,
+          link: "/personality-disorder-test"
         }
       ]
     },
