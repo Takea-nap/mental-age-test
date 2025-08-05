@@ -71,6 +71,14 @@ export default function MoreTestsPage() {
           link: "#"
         },
         {
+          name: "Gender Role Test",
+          description: "Discover your psychological gender role orientation and personality traits",
+          difficulty: "Easy",
+          duration: "5-8 minutes",
+          popular: true,
+          link: "/gender-role-test"
+        },
+        {
           name: "Stress Level Test",
           description: "Evaluate your current stress situation",
           difficulty: "Easy",
