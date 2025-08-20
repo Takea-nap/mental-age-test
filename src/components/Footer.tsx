@@ -30,7 +30,8 @@ export default function Footer() {
       { name: "Cognitive Assessment", href: "https://www.cognitiveassessment.com" },
       { name: "Mental Health", href: "https://www.mentalhealth.gov" },
       { name: "Brain Training", href: "https://www.braintraining.com" },
-      { name: "AIToolly", href: "https://AIToolly.com/", title: "AIToolly AI Tools Directory" }
+      { name: "AIToolly", href: "https://AIToolly.com/", title: "AIToolly AI Tools Directory" },
+      { name: "All in AI Tools", href: "https://allinai.tools", title: "All The Best AI Tools " }
     ]
   };
 
