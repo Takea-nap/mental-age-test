@@ -29,7 +29,8 @@ export default function Footer() {
       { name: "Mind Tools", href: "https://www.mindtools.com" },
       { name: "Cognitive Assessment", href: "https://www.cognitiveassessment.com" },
       { name: "Mental Health", href: "https://www.mentalhealth.gov" },
-      { name: "Brain Training", href: "https://www.braintraining.com" }
+      { name: "Brain Training", href: "https://www.braintraining.com" },
+      { name: "AIToolly", href: "https://AIToolly.com/", title: "AIToolly AI Tools Directory" }
     ]
   };
 
@@ -106,6 +107,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-300 hover:text-white transition-colors text-sm"
+                      title={link.title}
                     >
                       {link.name}
                     </a>
