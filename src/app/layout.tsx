@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Mental Age Test - Free Online Mental Age Quiz",
   description: "Discover your cognitive maturity with our free mental age test. This quick quiz reveals your intellectual age and mental maturity based on scientific principles",
   robots: "index, follow",
+  alternates: {
+    canonical: "https://mental-age-test.app",
+  },
   openGraph: {
     title: "Mental Age Test - Discover Your True Cognitive Age",
     description: "Free mental age test and personality quiz. Discover your intellectual age and mental maturity with our scientifically-designed assessment.",

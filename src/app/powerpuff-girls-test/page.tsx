@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     "Blossom Bubbles Buttercup quiz",
     "personality test"
   ],
+  alternates: {
+    canonical: "https://mental-age-test.app/powerpuff-girls-test",
+  },
 };
 
 const texts = {

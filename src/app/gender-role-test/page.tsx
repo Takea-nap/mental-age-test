@@ -5,6 +5,13 @@ import { Brain, Clock, Shield, Star, HelpCircle, Award, ArrowRight, Users, BarCh
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GenderRoleTestClient from "@/components/GenderRoleTestClient";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://mental-age-test.app/gender-role-test",
+  },
+};
 
 const texts = {
   en: {

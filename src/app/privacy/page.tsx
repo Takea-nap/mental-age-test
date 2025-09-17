@@ -1,5 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://mental-age-test.app/privacy",
+  },
+};
 
 export default function PrivacyPage() {
   return (

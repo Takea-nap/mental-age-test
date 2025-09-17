@@ -5,6 +5,13 @@ import { Brain, Clock, Shield, Star, HelpCircle, Award, ArrowRight, Users, BarCh
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PersonalityDisorderTestClient from "@/components/PersonalityDisorderTestClient";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://mental-age-test.app/personality-disorder-test",
+  },
+};
 
 const texts = {
   en: {

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Intellectual Age Test - Assess Your Cognitive Development",
   description: "Understand your intellectual age and cognitive development level through scientific cognitive assessment tests. ",
   keywords: "intellectual age test, cognitive ability test, IQ test, intelligence assessment, cognitive development",
+  alternates: {
+    canonical: "https://mental-age-test.app/intellectual-age-test",
+  },
 };
 
 export default function IntellectualAgeTestPage() {

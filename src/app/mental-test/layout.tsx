@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     creator: "@mentalagetest",
   },
   alternates: {
-    canonical: "https://yourdomain.com/mental-test",
+    canonical: "https://mental-age-test.app/mental-test",
     languages: {
-      'en-US': 'https://yourdomain.com/mental-test',
-      'zh-CN': 'https://yourdomain.com/mental-test',
+      'en-US': 'https://mental-age-test.app/mental-test',
+      'zh-CN': 'https://mental-age-test.app/mental-test',
     },
   },
   category: "Psychology",
