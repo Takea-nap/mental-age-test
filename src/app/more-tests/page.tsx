@@ -79,6 +79,14 @@ export default function MoreTestsPage() {
           link: "/gender-role-test"
         },
         {
+          name: "Powerpuff Girls Test",
+          description: "Find out if you're Blossom, Bubbles, or Buttercup",
+          difficulty: "Easy",
+          duration: "5-8 minutes",
+          popular: true,
+          link: "/powerpuff-girls-test"
+        },
+        {
           name: "Stress Level Test",
           description: "Evaluate your current stress situation",
           difficulty: "Easy",
