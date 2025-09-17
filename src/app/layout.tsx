@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://mental-age-test.app"),
   title: "Mental Age Test - Free Online Mental Age Quiz",
   description: "Discover your cognitive maturity with our free mental age test. This quick quiz reveals your intellectual age and mental maturity based on scientific principles",
   robots: "index, follow",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     description: "Free mental age test and personality quiz. Discover your intellectual age and mental maturity with our scientifically-designed assessment.",
     type: "website",
     url: "https://mental-age-test.app",
+    images: [{ url: "/og-home.jpg", width: 1200, height: 630, alt: "Mental Age Test - Free Online Mental Age Quiz" }],
   },
   twitter: {
     card: "summary_large_image",

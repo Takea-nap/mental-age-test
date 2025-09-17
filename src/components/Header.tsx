@@ -29,6 +29,8 @@ export default function Header() {
                 alt="Mental Age Test Logo"
                 width={40}
                 height={40}
+                priority
+                sizes="40px"
                 className="w-10 h-10"
               />
               <span className="text-xl font-bold text-gray-900 hidden sm:block">

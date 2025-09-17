@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/personality-disorder-test",
   },
+  openGraph: {
+    title: "Personality Disorder Test - Educational Screening Quiz",
+    description: "Learn about personality patterns with an educational, privacy-friendly screening quiz.",
+    type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Personality Disorder Test" }],
+  },
 };
 
 const texts = {

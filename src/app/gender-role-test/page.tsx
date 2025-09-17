@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/gender-role-test",
   },
+  openGraph: {
+    title: "Gender Role Test - Masculine & Feminine Traits Assessment",
+    description: "Discover your psychological gender role orientation through a balanced trait assessment.",
+    type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Gender Role Test" }],
+  },
 };
 
 const texts = {

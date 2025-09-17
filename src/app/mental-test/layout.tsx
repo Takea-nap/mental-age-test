@@ -25,19 +25,14 @@ export const metadata: Metadata = {
     description: "Discover your mental age with our free mental age test. This comprehensive mental health quiz and personality disorder test reveals your intellectual age and cognitive maturity level.",
     siteName: "Mental Age Test",
     images: [
-      {
-        url: "/og-mental-age-test.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Mental Age Test - Free Online Mental Age Quiz",
-      },
+      { url: "/logo.png", width: 1200, height: 630, alt: "Mental Age Test - Free Online Mental Age Quiz" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Free Mental Age Test - Mental Age Quiz Online",
     description: "Take our mental age test to discover your intellectual age and mental maturity. Free mental health quiz with instant results.",
-    images: ["/og-mental-age-test.jpg"],
+    images: ["/logo.png"],
     creator: "@mentalagetest",
   },
   alternates: {

@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/privacy",
   },
+  openGraph: {
+    title: "Privacy Policy - Mental Age Test",
+    description: "Read the privacy policy for Mental Age Test.",
+    type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Mental Age Test" }],
+  },
 };
 
 export default function PrivacyPage() {

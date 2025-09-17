@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     title: "More Psychological Tests - Mental Age Test",
     description: "Explore various professional psychological tests including intelligence tests, personality tests, emotional intelligence tests, and more.",
     type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "More Psychological Tests" }],
   },
 };
 

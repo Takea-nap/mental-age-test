@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/terms",
   },
+  openGraph: {
+    title: "Terms of Service - Mental Age Test",
+    description: "Read the terms of service for Mental Age Test.",
+    type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Mental Age Test" }],
+  },
 };
 
 export default function TermsPage() {

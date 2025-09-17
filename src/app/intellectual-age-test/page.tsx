@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/intellectual-age-test",
   },
+  openGraph: {
+    title: "Intellectual Age Test - Assess Your Cognitive Development",
+    description: "Understand your intellectual age and cognitive development level through scientific cognitive assessment tests.",
+    type: "website",
+    images: [{ url: "/og-intellectual-age.jpg", width: 1200, height: 630, alt: "Intellectual Age Test" }],
+  },
 };
 
 export default function IntellectualAgeTestPage() {

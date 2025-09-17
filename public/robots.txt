@@ -1,4 +1,5 @@
 User-agent: *
-Disallow: /*?*q=
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+Allow: /
+
+# Sitemap declaration
+Sitemap: https://mental-age-test.app/sitemap.xml

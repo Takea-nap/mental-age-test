@@ -28,6 +28,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mental-age-test.app/powerpuff-girls-test",
   },
+  openGraph: {
+    title: "Powerpuff Girls Test - Which Powerpuff Girl Are You?",
+    description: "Find out your Powerpuff Girls match with a quick, fun personality quiz.",
+    type: "website",
+    images: [{ url: "/logo.png", width: 1200, height: 630, alt: "Powerpuff Girls Test" }],
+  },
 };
 
 const texts = {
